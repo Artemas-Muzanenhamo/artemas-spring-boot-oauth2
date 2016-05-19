@@ -1,4 +1,4 @@
-package main.webapp;
+package org.artemas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @EnableAutoConfiguration
-public class Example {
+public class UIWebpage {
 	
 	@RequestMapping("/")
 	String home(){
@@ -15,7 +15,7 @@ public class Example {
 	}
 	
 	public static void main(String[] args){
-		SpringApplication.run(Example.class, args);
+		SpringApplication.run(UIWebpage.class, args);
 	}
 
 }
