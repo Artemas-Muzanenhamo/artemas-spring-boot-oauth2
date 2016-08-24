@@ -1,0 +1,23 @@
+{
+  "name": "spring-boot-app",
+  "authors": [
+    "Artemas.M"
+  ],
+  "description": "This is a the Pictopage AngularJS/SpringBoot Appication.",
+  "main": "",
+  "license": "Pictopage",
+  "homepage": "http://www.pictopage.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "ui-router#^0.3.1",
+    "angular-route": "^1.5.8"
+  }
+}

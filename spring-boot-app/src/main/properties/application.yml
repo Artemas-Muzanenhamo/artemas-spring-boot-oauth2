@@ -1,0 +1,12 @@
+logging:
+  level:
+    org.springframework.security: INFO
+
+spring:
+  resources:
+    chain:
+      enabled: true
+      
+server:
+    port: 8080
+    contextPath: /
