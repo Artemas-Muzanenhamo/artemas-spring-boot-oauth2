@@ -1,5 +1,6 @@
 package org.artemas;
 
+import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -20,14 +21,6 @@ public class UIWebpage extends SpringBootServletInitializer {
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(UIWebpage.class);
     }
-	
-	 @RequestMapping("/user")
-	  public Map<String,Object> home() {
-	    Map<String,Object> model = new HashMap<String,Object>();
-	    model.put("id", UUID.randomUUID().toString());
-	    model.put("content", "Hello World");
-	    return model;
-	  }
 	
 	public static void main(String[] args){
 		SpringApplication.run(UIWebpage.class, args);

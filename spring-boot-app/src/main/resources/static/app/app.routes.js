@@ -8,11 +8,10 @@ pictopage.config(["$routeProvider", "$stateProvider", "$urlRouterProvider", "$ht
 	
 	$stateProvider
 	// route for the homepage
-	.state('/', {
-		url: '/',
-		templateUrl : 'app/home/home.html',
-		controller : 'home',
-		controllerAs: 'homeCtrl'
+	.state('/login', {
+		url: '/login',
+		templateUrl : 'login.html',
+		controller : 'login'
 	}).state('/home', {
 		url: '/home',
 		templateUrl : '../app/home/home.html',
