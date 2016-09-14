@@ -27,8 +27,8 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li ng-class="{active:nav1.tab('home')}" class="active"><a href="#/">HOME</a></li>
-						<li ng-hide="authenticated" ng-class="{active:nav1.tab('navigation')}"><a href="/login">LOGIN</a></li>
+						<li ng-class="{active:nav1.tab('home')}"><a href="#/">HOME</a></li>
+						<li ng-hide="authenticated" ng-class="{active:nav1.tab('navigation')}"><a href="login">LOGIN</a></li>
 						<li ng-show="authenticated"><a href="#">ABOUT</a></li>
 						<li ng-show="authenticated"><a href="#">CONTACT</a></li>
 						<li ng-show="authenticated"><a href="" ng-click="logout()">LOGOUT</a></li>
