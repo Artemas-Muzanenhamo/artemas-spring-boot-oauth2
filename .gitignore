@@ -1,6 +1,1 @@
-spring-boot-app/target/docker
-spring-boot-app/target/generated-sources
-spring-boot-app/target/maven-archiver
-spring-boot-app/target/maven-status
-spring-boot-app/target/test-classes
-spring-boot-app/target/*.original
+
