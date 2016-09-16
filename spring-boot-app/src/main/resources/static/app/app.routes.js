@@ -18,6 +18,16 @@ pictopage.config(["$routeProvider", "$stateProvider", "$urlRouterProvider", "$ht
 		controller : 'home',
 		controllerAs: 'homeCtrl'
 	// route for the calendar
+	}).state('/about', {
+		url: '/about',
+		templateUrl: '../app/about/about.html',
+		controller: 'aboutCtrl',
+		controllerAs: 'aboutCtrl'
+	}).state('/contact', {
+		url: '/contact',
+		templateUrl: '../app/contact/contact.html',
+		controller: 'contactCtrl',
+		controllerAs: 'contactCtrl'
 	});
 	
 	$httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';

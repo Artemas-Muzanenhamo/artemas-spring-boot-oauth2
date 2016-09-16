@@ -7,6 +7,7 @@
 		<!-- CSS Dependencies -->
 		<link rel="stylesheet" href="common/bower_components/bootstrap/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="common/bower_components/angular/angular-csp.css"/>
+		<link rel="stylesheet" href="assets/css/style.css"/>
 		<style type="text/css">
         [ng\:cloak], [ng-cloak], .ng-cloak {
             display: none !important;
@@ -15,7 +16,7 @@
 	</head>
 	<body class="container-fluid" ng-app="pictopage">
 		<nav class="navbar navbar-default">
-			<div class="container" ng-controller="navigation as nav1">
+			<div class="container" ng-controller="navigation">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Toggle Navigation</span>
@@ -25,12 +26,12 @@
 					</button>
 					<a class="navbar-brand" href="#">Pictopage</a>
 				</div>
-				<div id="navbar" class="navbar-collapse collapse">
+				<div id="navbar" ng-controller="aboutCtrl" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li ng-class="{active:nav1.tab('home')}"><a href="#/">HOME</a></li>
+						<li ng-class="{active:isActive('/')}"><a href="#/">HOME</a></li>
 						<li ng-hide="authenticated" ng-class="{active:nav1.tab('navigation')}"><a href="login">LOGIN</a></li>
-						<li ng-show="authenticated"><a href="#">ABOUT</a></li>
-						<li ng-show="authenticated"><a href="#">CONTACT</a></li>
+						<li ng-class="{active:isActive('/about')}" ng-show="authenticated"><a href="#/about">ABOUT</a></li>
+						<li ng-class="{active:isActive('/contact')}" ng-show="authenticated"><a href="#/contact">CONTACT</a></li>
 						<li ng-show="authenticated"><a href="" ng-click="logout()">LOGOUT</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
@@ -57,9 +58,13 @@
 		<script src="common/bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="common/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="common/bower_components/angular-route/angular-route.min.js"></script>
+		
 		<!-- Application Module and Routes -->
 		<script src="app/app.modules.js"></script>
 		<script src="app/app.routes.js"></script>
+		
 		<!-- View Dependencies -->
+		<script src="app/about/aboutController.js"></script>
+		<script src="app/contact/contactCtrl.js"></script>
 	</body>
 </html>

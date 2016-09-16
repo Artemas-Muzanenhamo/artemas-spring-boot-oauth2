@@ -59,7 +59,7 @@ public class PictopageSecurityConfig extends WebSecurityConfigurerAdapter{
 	    	.httpBasic()
 	    .and()
         	.authorizeRequests()
-        	.antMatchers("/app/**", "/common/bower_components/**","/index.html", "/home.html", "/login.html", "/").permitAll()
+        	.antMatchers("/app/**", "/assets/css/**", "/common/bower_components/**","/index.html", "/home.html", "/login.html", "/").permitAll()
         	.anyRequest().authenticated()
         .and()
         	.formLogin()

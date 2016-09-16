@@ -1,6 +1,6 @@
 'use strict';
 
-var pictopage = angular.module("pictopage", ["ngRoute","ui.router"])
+var pictopage = angular.module("pictopage", ["ngRoute","ngAnimate", "ui.router"])
 
   .controller('home', function($scope, $http) {
     $http.get('/resource/').success(function(data) {
