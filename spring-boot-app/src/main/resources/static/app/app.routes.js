@@ -26,8 +26,8 @@ pictopage.config(["$routeProvider", "$stateProvider", "$urlRouterProvider", "$ht
 	}).state('/contact', {
 		url: '/contact',
 		templateUrl: '../app/contact/contact.html',
-		controller: 'contactCtrl',
-		controllerAs: 'contactCtrl'
+		controller: 'ContactController',
+		controllerAs: 'ContactController'
 	});
 	
 	$httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
