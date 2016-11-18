@@ -6,7 +6,9 @@
 		<title>Pictopage Home</title>
 		<!-- CSS Dependencies -->
 		<link rel="stylesheet" href="common/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="common/bower_components/bootstrap-social/bootstrap-social.css" />
 		<link rel="stylesheet" href="common/bower_components/angular/angular-csp.css"/>
+		<link rel="stylesheet" href="common/bower_components/font-awesome/css/font-awesome.min.css"/>
 		<link rel="stylesheet" href="assets/css/style.css"/>
 		<style type="text/css">
         [ng\:cloak], [ng-cloak], .ng-cloak {
@@ -14,7 +16,7 @@
         }
         </style>
 	</head>
-	<body class="container-fluid" ng-app="pictopage">
+	<body class="container-fluid" ng-app="pictopage" ng-controller="home as home">
 		<nav class="navbar navbar-default">
 			<div class="container" ng-controller="navigation">
 				<div class="navbar-header">
@@ -26,28 +28,30 @@
 					</button>
 					<a class="navbar-brand" href="#">Pictopage</a>
 				</div>
-				<div id="navbar" ng-controller="aboutCtrl" class="navbar-collapse collapse">
+				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li ng-class="{active:isActive('/')}"><a href="#/">HOME</a></li>
-						<li ng-hide="authenticated" ng-class="{active:nav1.tab('navigation')}"><a href="login">LOGIN</a></li>
-						<li ng-class="{active:isActive('/about')}" ng-show="authenticated"><a href="#/about">ABOUT</a></li>
-						<li ng-class="{active:isActive('/contact')}" ng-show="authenticated"><a href="#/contact">CONTACT</a></li>
-						<li ng-show="authenticated"><a href="" ng-click="logout()">LOGOUT</a></li>
+						<li ng-show="home.authenticated" ng-class="{active:isActive('/')}"><a href="#/">HOME</a></li>
+						<li ng-show="!home.authenticated"><a href="/login"><i class="fa fa-facebook-square fa-2x btn btn-primary btn-facebook" aria-hidden="true"></i></a></li>
+						<li ng-show="!home.authenticated"><a href="#/"><i class="fa fa-twitter fa-2x btn btn-primary btn-twitter" aria-hidden="true"></i></a></li>
+						<li ng-show="!home.authenticated"><a href="#/"><i class="fa fa-google-plus-square fa-2x btn btn-primary btn-google" aria-hidden="true"></i></a></li>
+						<li ng-class="{active:isActive('/about')}" ng-show="home.authenticated"><a href="#/about">ABOUT</a></li>
+						<li ng-class="{active:isActive('/contact')}" ng-show="home.authenticated"><a href="#/contact">CONTACT</a></li>
+						<li ng-show="home.authenticated"><a href="" ng-click="home.logout()">LOGOUT</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a>FIXED TOP</a></li>
+						<li class="active" ng-show="home.authenticated"><a>Logged in as: <span ng-bind="home.user"></span></a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 		
 		<!-- NO AUTHENTICATION -->
-		<div  ng-if="!authenticated">
+		<div  ng-if="!home.authenticated">
 			<p>Login to see your greeting</p>
 		</div>
 		
 		<!-- MAIN -->
-		<div ng-if="authenticated" class="container" ng-cloak>
+		<div ng-if="home.authenticated" class="container" ng-cloak>
 			<div ui-view> </div>
 		</div>
 		

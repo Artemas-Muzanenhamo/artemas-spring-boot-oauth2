@@ -12,6 +12,14 @@ server:
     contextPath: /
     
 security:
-  sessions: ALWAYS
-  basic:
-    enabled: false
+  oauth2:
+    client:
+      client-id: 340608452968634
+      client-secret: d59c6034d1cba946f9097c0537bb5948
+      access-token-uri: https://graph.facebook.com/oauth/access_token
+      user-authorization-uri: https://www.facebook.com/dialog/oauth
+      token-name: oauth_token
+      authentication-scheme: query
+      client-authentication-scheme: form
+    resource:
+      user-info-uri: https://graph.facebook.com/me
