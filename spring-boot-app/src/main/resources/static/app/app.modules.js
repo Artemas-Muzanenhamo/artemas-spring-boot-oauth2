@@ -2,40 +2,36 @@
 
 var pictopage = angular.module("pictopage", ["ngRoute","ngAnimate", "ui.router"])
 
-  .controller('home', function($scope, $http) {
-    $http.get('/resource/').success(function(data) {
-      $scope.greeting = data;
-    })
-  })
+  .controller("home", function($rootScope, $scope, $http, $location) {
+    var self = this;
+    $http.get("/user").success(function(data) {
+      self.user = data.userAuthentication.details.name;
+      self.authenticated = true;
+      $scope.isActive = function(route){
+  	  	return route === $location.$$path;
+  	  }
+    }).error(function() {
+      self.user = "N/A";
+      self.authenticated = false;
+    });
+    
+    self.logout = function() {
+		$http.post('/logout', {}).success(function() {
+			self.authenticated = false;
+			$location.path("/");
+		}).error(function(data) {
+			console.log("Logout failed")
+			self.authenticated = false;
+		});
+	};
+    
+  });
   
   /*
-   * All the code in the `navigation` controller will be executed when the page loads because of the `ng-controller="navigation"`
-   * */
-  .controller('navigation',
-
-  function($rootScope, $scope, $http, $location) {
-
-  var authenticate = function(credentials, callback) {
-
-    var headers = credentials ? {
-    	//
-    	authorization : "Basic " + btoa(credentials.username + ":" + credentials.password)
-    } : {};
-
-    $http.get('user', {headers : headers}).success(function(data) {
-      if (data.name) {
-        $rootScope.authenticated = true;
-      } else {
-        $rootScope.authenticated = false;
-      }
-      callback && callback();
-    }).error(function() {
-      $rootScope.authenticated = false;
-      callback && callback();
-    });
-
-  }
-
+	 * All the code in the `navigation` controller will be executed when the
+	 * page loads because of the `ng-controller="navigation"`
+	 */
+  pictopage.controller('navigation', function($rootScope, $scope, $http, $location) {
   /**
    * 
    * In addition to initializing the credentials object, 
@@ -77,7 +73,6 @@ var pictopage = angular.module("pictopage", ["ngRoute","ngAnimate", "ui.router"]
    * error message above the login form.
    * 
    */
-  authenticate();
   $scope.credentials = {};
   $scope.login = function() {
       authenticate($scope.credentials, function() {
@@ -90,16 +85,5 @@ var pictopage = angular.module("pictopage", ["ngRoute","ngAnimate", "ui.router"]
         }
       });
   };
-  
-  
-
-  $scope.logout = function() {
-	$http.post('logout', {}).success(function() {
-		$rootScope.authenticated = false;
-		$location.path("/");
-	}).error(function(data) {
-		$rootScope.authenticated = false;
-	});
-  }
 
 });
