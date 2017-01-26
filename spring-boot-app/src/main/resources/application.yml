@@ -8,7 +8,7 @@ spring:
       enabled: true
       
 server:
-    port: 8888
+    port: 8080
     contextPath: /
     
 security:
