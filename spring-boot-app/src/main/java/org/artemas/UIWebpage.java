@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.cors.CorsConfiguration;
@@ -64,10 +65,11 @@ public class UIWebpage extends WebSecurityConfigurerAdapter{
 	 * @param user
 	 * @return user Principal Obj
 	 */
-	 @RequestMapping("/user")
-	 public Principal user(Principal user){
-		 return user;
-	 }
+	@CrossOrigin(origins = "http://pictopage.com")
+	@RequestMapping("/user")
+	public Principal user(Principal user) {
+		return user;
+	}
 
 }
 
