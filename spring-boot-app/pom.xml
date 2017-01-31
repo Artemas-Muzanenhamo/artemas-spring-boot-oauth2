@@ -268,11 +268,11 @@
 							<version>${project.version}</version>
 							<type>jar</type>
 							<overWrite>false</overWrite>
-							<outputDirectory>../src/main/docker</outputDirectory>
+							<outputDirectory>${project.basedir}/src/main/docker</outputDirectory>
 							<destFileName>${project.artifactId}.jar</destFileName>
 						</artifactItem>
 					</artifactItems>
-					<outputDirectory>../src/main/docker</outputDirectory>
+					<outputDirectory>${project.basedir}/src/main/docker</outputDirectory>
 					<overWriteReleases>false</overWriteReleases>
 					<overWriteSnapshots>true</overWriteSnapshots>
 				</configuration>
