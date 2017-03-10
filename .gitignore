@@ -3,3 +3,5 @@ spring-boot-app/target/*maven*
 spring-boot-app/target/classes
 spring-boot-app/target/*.original
 src/main/docker
+spring-boot-app/.idea
+spring-boot-app.iml
