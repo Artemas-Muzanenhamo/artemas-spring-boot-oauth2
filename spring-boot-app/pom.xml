@@ -177,7 +177,7 @@
 							</execution>
 							<execution>
 								<id>push-image</id>
-								<phase>build</phase>
+								<phase>package</phase>
 								<goals>
 									<goal>push</goal>
 								</goals>

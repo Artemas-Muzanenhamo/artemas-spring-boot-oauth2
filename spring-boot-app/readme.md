@@ -18,8 +18,18 @@
 	* Base Image (e.g. `Centos` or `Ubuntu`)
 
 ### Commands - Docker
-- `docker images` : to check if the built image exists.
+
+##### Check Images
+- `docker images`
+
+##### Run Image on Deamon
 - `docker run -d -p {host-port}:{container-port} --name {appname} {image-name}`
+
+##### Remove untagged images
+- `docker rmi $(docker images -f dangling=true -q)`
+
+##### Remove all stopped containers
+- `docker rm $(docker ps -a -q)`
 
 ### Commands - Maven
 - `mvn release:update-versions` : to update the Snapshot Version in the `pom.xml`
