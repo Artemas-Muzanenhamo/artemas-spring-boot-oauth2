@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="common/bower_components/bootstrap-social/bootstrap-social.css" />
 		<link rel="stylesheet" href="common/bower_components/angular/angular-csp.css"/>
 		<link rel="stylesheet" href="common/bower_components/font-awesome/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="assets/css/custom-style.css" />
 		<link rel="stylesheet" href="assets/css/style.css"/>
 		<style type="text/css">
         [ng\:cloak], [ng-cloak], .ng-cloak {
@@ -31,9 +32,9 @@
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
 						<li ng-show="home.authenticated" ng-class="{active:isActive('/')}"><a href="#/">HOME</a></li>
-						<li ng-show="!home.authenticated"><a href="/login"><i class="fa fa-facebook-square fa-2x btn btn-primary btn-facebook" aria-hidden="true"></i></a></li>
-						<li ng-show="!home.authenticated"><a href="#/"><i class="fa fa-twitter fa-2x btn btn-primary btn-twitter" aria-hidden="true"></i></a></li>
-						<li ng-show="!home.authenticated"><a href="#/"><i class="fa fa-google-plus-square fa-2x btn btn-primary btn-google" aria-hidden="true"></i></a></li>
+						<!--<li ng-show="!home.authenticated"><a href="/login"><i class="fa fa-facebook-square fa-2x btn btn-primary btn-facebook" aria-hidden="true"></i></a></li>-->
+						<!--<li ng-show="!home.authenticated"><a href="#/"><i class="fa fa-twitter fa-2x btn btn-primary btn-twitter" aria-hidden="true"></i></a></li>-->
+						<!--<li ng-show="!home.authenticated"><a href="#/"><i class="fa fa-google-plus-square fa-2x btn btn-primary btn-google" aria-hidden="true"></i></a></li>-->
 						<li ng-class="{active:isActive('/about')}" ng-show="home.authenticated"><a href="#/about">ABOUT</a></li>
 						<li ng-class="{active:isActive('/contact')}" ng-show="home.authenticated"><a href="#/contact">CONTACT</a></li>
 						<li ng-show="home.authenticated"><a href="" ng-click="home.logout()">LOGOUT</a></li>
@@ -46,8 +47,12 @@
 		</nav>
 		
 		<!-- NO AUTHENTICATION -->
-		<div  ng-if="!home.authenticated">
-			<p>Login to see your greeting</p>
+		<div  ng-if="!home.authenticated" class="login">
+			<div class="wrapper">
+				<div class="message center-block btn btn-large btn-primary">
+					<a href="/login" class="btn btn-social btn-facebook btn-lg btn-text"><span class="fa fa-facebook-square" aria-hidden="true"></span>Sign in with Facebook</a>
+				</div>
+			</div>
 		</div>
 		
 		<!-- MAIN -->

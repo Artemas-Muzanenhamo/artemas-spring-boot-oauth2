@@ -21,6 +21,7 @@
     "angular-route": "^1.5.8",
     "angular-animate": "^1.5.8",
     "font-awesome": "^4.7.0",
-    "bootstrap-social": "^5.0.0"
+    "bootstrap-social": "^5.0.0",
+    "MDBootstrap": "^4.3.2"
   }
 }

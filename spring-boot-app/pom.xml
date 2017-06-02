@@ -344,7 +344,13 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		<!--<dependency>-->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-facebook</artifactId>
+            <version>1.0.0.RC1</version>
+            <scope>test</scope>
+        </dependency>
+        <!--<dependency>-->
 			<!--<groupId>org.apache.derby</groupId>-->
 			<!--<artifactId>derby</artifactId>-->
 			<!--<scope>runtime</scope>-->
