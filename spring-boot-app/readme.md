@@ -1,6 +1,8 @@
 #<center>Pictopage</center>
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/artemas/artemas-spring-boot-app.svg)](https://hub.docker.com/r/artemas/artemas-spring-boot-app/)
+[![Docker Build Statu](https://img.shields.io/docker/build/artemas/artemas-spring-boot-oauth2.svg?style=flat-square)](https://github.com/Artemas-Muzanenhamo/artemas-spring-boot-oauth2)
+[![Docker Pulls](https://img.shields.io/docker/pulls/artemas/artemas-spring-boot-oauth2.svg?style=flat-square)](https://github.com/Artemas-Muzanenhamo/artemas-spring-boot-oauth2)
+[![Docker Automated buil](https://img.shields.io/docker/automated/artemas/artemas-spring-boot-oauth2.svg?style=flat-square)](https://github.com/Artemas-Muzanenhamo/artemas-spring-boot-oauth2)
 
 
 ##### Section1. For Dev Purposes:
