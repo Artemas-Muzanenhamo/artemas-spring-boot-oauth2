@@ -1,5 +1,7 @@
 #<center>Pictopage</center>
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/mashape/kong.svg)](https://hub.docker.com/r/artemas/artemas-spring-boot-app/)
+
 
 ##### Section1. For Dev Purposes:
 * Run `bower install` to install all the js/css dependencies for the project.
