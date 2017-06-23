@@ -1,6 +1,6 @@
 #<center>Pictopage</center>
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/mashape/kong.svg)](https://hub.docker.com/r/artemas/artemas-spring-boot-app/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/artemas/artemas-spring-boot-app.svg)](https://hub.docker.com/r/artemas/artemas-spring-boot-app/)
 
 
 ##### Section1. For Dev Purposes:
