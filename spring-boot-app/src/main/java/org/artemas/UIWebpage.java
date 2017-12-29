@@ -28,7 +28,7 @@ public class UIWebpage extends WebSecurityConfigurerAdapter{
 		http
 				.antMatcher("/**")
 				.authorizeRequests()
-				.antMatchers("/", "/login**", "/webjars/**", "/app/**", "/assets/css/**", "/common/bower_components/**", "/index.html")
+				.antMatchers("/", "/login**", "/webjars/**", "/app/**", "/assets/css/**", "/assets/images/wallpaper.png", "/common/bower_components/**", "/index.html")
 				.permitAll()
 				.anyRequest()
 				.authenticated()
