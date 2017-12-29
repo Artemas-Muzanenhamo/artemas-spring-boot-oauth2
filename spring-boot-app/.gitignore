@@ -1,5 +1,6 @@
 /target/
 /src/main/resources/static/common/bower_components/
+/src/main/resources/static/common/bower_components/*
 /.tern-project
 /spring-boot-app.iml
 /derby.log
