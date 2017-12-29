@@ -326,20 +326,10 @@
 			<version>2.5</version>
 			<scope>test</scope>
 		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.security.oauth</groupId>-->
-			<!--<artifactId>spring-security-oauth2</artifactId>-->
-			<!--<version>2.0.13.RELEASE</version>-->
-			<!--<scope>test</scope>-->
-		<!--</dependency>-->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
 		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot-starter-data-jpa</artifactId>-->
-		<!--</dependency>-->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -347,13 +337,8 @@
         <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-facebook</artifactId>
-            <version>1.0.0.RC1</version>
+            <version>2.0.3.RELEASE</version>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>-->
-			<!--<groupId>org.apache.derby</groupId>-->
-			<!--<artifactId>derby</artifactId>-->
-			<!--<scope>runtime</scope>-->
-		<!--</dependency>-->
 	</dependencies>
 </project>

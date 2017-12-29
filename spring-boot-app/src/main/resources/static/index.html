@@ -31,12 +31,12 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li ng-show="home.authenticated" ng-class="{active:isActive('/')}"><a href="#/">HOME</a></li>
+						<li ng-show="home.authenticated"><a href="#/">HOME</a></li>
 						<!--<li ng-show="!home.authenticated"><a href="/login"><i class="fa fa-facebook-square fa-2x btn btn-primary btn-facebook" aria-hidden="true"></i></a></li>-->
 						<!--<li ng-show="!home.authenticated"><a href="#/"><i class="fa fa-twitter fa-2x btn btn-primary btn-twitter" aria-hidden="true"></i></a></li>-->
 						<!--<li ng-show="!home.authenticated"><a href="#/"><i class="fa fa-google-plus-square fa-2x btn btn-primary btn-google" aria-hidden="true"></i></a></li>-->
-						<li ng-class="{active:isActive('/about')}" ng-show="home.authenticated"><a href="#/about">ABOUT</a></li>
-						<li ng-class="{active:isActive('/contact')}" ng-show="home.authenticated"><a href="#/contact">CONTACT</a></li>
+						<li ng-show="home.authenticated"><a href="#/about">ABOUT</a></li>
+						<li ng-show="home.authenticated"><a href="#/contact">CONTACT</a></li>
 						<li ng-show="home.authenticated"><a href="" ng-click="home.logout()">LOGOUT</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">

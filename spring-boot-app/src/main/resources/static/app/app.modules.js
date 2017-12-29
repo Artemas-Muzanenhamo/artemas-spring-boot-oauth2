@@ -4,15 +4,12 @@ var pictopage = angular.module("pictopage", ["ngRoute","ngAnimate", "ui.router"]
 
   .controller("home", function($rootScope, $scope, $http, $location) {
     var self = this;
-    $http.get("/user").success(function(data) {
-      self.user = data.userAuthentication.details.name;
+    $http.get("/user").then(function(response) {
+      self.user = response.data.userAuthentication.details.name;
       self.authenticated = true;
-      $scope.isActive = function(route){
-  	  	return route === $location.$$path;
-  	  }
-    }).error(function() {
-      self.user = "N/A";
-      self.authenticated = false;
+    }).catch(function (response) {
+        self.user = "N/A";
+        self.authenticated = false;
     });
     
     self.logout = function() {
@@ -20,7 +17,7 @@ var pictopage = angular.module("pictopage", ["ngRoute","ngAnimate", "ui.router"]
 			self.authenticated = false;
 			$location.path("/");
 		}).error(function(data) {
-			console.log("Logout failed")
+			console.log("Logout failed");
 			self.authenticated = false;
 		});
 	};
