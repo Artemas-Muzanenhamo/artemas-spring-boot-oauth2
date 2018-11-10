@@ -5,3 +5,5 @@ spring-boot-app/target/*.original
 src/main/docker
 spring-boot-app/.idea
 spring-boot-app.iml
+/.idea/
+/spring-boot-app/target/
