@@ -26,4 +26,4 @@ It also uses Spring-Social as it uses facebook's graph API.
 #### Docker Instructions
 
 * Run `docker images` to check if the built image exists.
-* Run the image : `docker run -d -p 8888:8888 --name {appname} {image-name}`
+* Run the image : `docker run -d -p 8888:8080 --name {appname} {image-name}`
